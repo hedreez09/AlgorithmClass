@@ -21,15 +21,15 @@ namespace AlgorithmClass
 		//this checks if the passcoed follows the rule
 		static bool IsPasswordComplex( string s)
 		{
-			//Any checks the if the any of the char contains needed value 
+			//Any() checks if any of the character contains needed value 
 			return s.Any(char.IsUpper) && s.Any(char.IsLower) && s.Any(char.IsDigit);
 		}
 
 		//Normalizing Data this help in achieving a more efficient algorithm
 		static string NormalizeString(string input)
 		{
-			//the tolowe helps cinvert char to lower case, the Trim
-			//removew whitespace and the replace removed the specified char in the bracket
+			//the Tolower() helps convert character to lower case, the Trim()
+			//remove whitespace and the replace() removed the specified character in the bracket from the string
 			return input.ToLower().Trim().Replace(",", "");
 		}
 
@@ -53,7 +53,7 @@ namespace AlgorithmClass
 				
 		}
 		
-		//if the search is to know the char in the even index of the string 
+		//if the search is to know the character in the even index of the string 
 		static Boolean IsEvenIndex(String s, char item)
 		{
 			if (String.IsNullOrEmpty(s))//check if the string is null
@@ -61,7 +61,7 @@ namespace AlgorithmClass
 				return false;
 			}
 			//this search the precised even location
-			for (int i = 0; i <s.Length /2 + 1 ; i= i + 2)
+			for (int i = 0; i <s.Length /2 + 1 ; i = i + 2)
 			{
 				if(s[i] == item)
 				{
@@ -83,7 +83,7 @@ namespace AlgorithmClass
 			//this start the operation from the last char of the string then decrement the string
 			for(int i = input.Length-1; i >= 0; i--)
 			{
-				reversed.Append(input[i]);// this add the new createdchar to the index
+				reversed.Append(input[i]);// this add the new created char to the index
 			}
 
 			return reversed.ToString(); // the convert the stringBuilder to string
