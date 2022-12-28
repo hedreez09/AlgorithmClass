@@ -18,7 +18,7 @@ namespace AlgorithmClass
 		}
 
 
-		//this checks if the passcoed follows the rule
+		//this checks if the passcode follows the rule
 		static bool IsPasswordComplex( string s)
 		{
 			//Any() checks if any of the character contains needed value 
