@@ -131,23 +131,18 @@ namespace AlgorithmClass
             
         }
 
+		static int LinearSearch(int[] input, int n)
+		{
+			return 
+		}
+
         static void Main(string[] args)
 		{
 			
 			Console.WriteLine(ReverseWord("Rayo is my name!"));
 			Console.WriteLine(ReverseSentence("Hello my people!"));
-			//Console.WriteLine(Reverse2("")); 
-			//Console.WriteLine(Reverse2("torcS"));
-			//Console.WriteLine(Reverse2("Ligali"));
-			//Console.WriteLine(Reverse2("Racecar"));
-
-			//Console.WriteLine("Reverse");
-			//Console.WriteLine(Reverse("Omotolani"));
-			//Console.WriteLine(Reverse("Hello World!"));
-			//Console.WriteLine(Reverse(""));
-			//Console.WriteLine(Reverse("torcS"));
-			//Console.WriteLine(Reverse("Ligali"));
-			//Console.WriteLine(Reverse("Racecar"));
+			
+			//Linear search 
 		}
 	}
 }
