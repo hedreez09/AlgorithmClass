@@ -101,23 +101,53 @@ namespace AlgorithmClass
 			return new String(arr);
 		}
 
-		static void Main(string[] args)
+
+		//reverse word
+        static String ReverseWord(String input)
+        {
+           if (String.IsNullOrEmpty(input))
+            {
+                return input;
+            }
+
+			StringBuilder result = new StringBuilder();
+			String[] arr = input.Split(" ");
+			return string.Join(" ",arr.Reverse());
+        }
+
+		static String ReverseSentence(String input)
+		{
+            if (String.IsNullOrEmpty(input))
+                return input;
+            String[] arr = input.Split(" ");
+            StringBuilder result = new StringBuilder();
+            for (var i = 0; i < arr.Length; i++)
+			{
+				result.Append(Reverse(arr[i]));
+				if(i != arr.Length - 1) 
+					result.Append(" ");
+            }
+			return result.ToString();
+            
+        }
+
+        static void Main(string[] args)
 		{
 			
-			Console.WriteLine(Reverse2("Omotolani"));
-			Console.WriteLine(Reverse2("Hello World!"));
-			Console.WriteLine(Reverse2("")); 
-			Console.WriteLine(Reverse2("torcS"));
-			Console.WriteLine(Reverse2("Ligali"));
-			Console.WriteLine(Reverse2("Racecar"));
+			Console.WriteLine(ReverseWord("Rayo is my name!"));
+			Console.WriteLine(ReverseSentence("Hello my people!"));
+			//Console.WriteLine(Reverse2("")); 
+			//Console.WriteLine(Reverse2("torcS"));
+			//Console.WriteLine(Reverse2("Ligali"));
+			//Console.WriteLine(Reverse2("Racecar"));
 
-			Console.WriteLine("Reverse");
-			Console.WriteLine(Reverse("Omotolani"));
-			Console.WriteLine(Reverse("Hello World!"));
-			Console.WriteLine(Reverse(""));
-			Console.WriteLine(Reverse("torcS"));
-			Console.WriteLine(Reverse("Ligali"));
-			Console.WriteLine(Reverse("Racecar"));
+			//Console.WriteLine("Reverse");
+			//Console.WriteLine(Reverse("Omotolani"));
+			//Console.WriteLine(Reverse("Hello World!"));
+			//Console.WriteLine(Reverse(""));
+			//Console.WriteLine(Reverse("torcS"));
+			//Console.WriteLine(Reverse("Ligali"));
+			//Console.WriteLine(Reverse("Racecar"));
 		}
 	}
 }
